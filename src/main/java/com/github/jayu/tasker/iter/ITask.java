@@ -1,5 +1,7 @@
 package com.github.jayu.tasker.iter;
 
+import com.github.jayu.tasker.model.TaskStatus;
+
 /**
  * 任务
  * @author yujie
@@ -22,5 +24,11 @@ public interface ITask {
 	 * @return
 	 */
 	IRate getRate();
+	
+	/**
+	 * 获取任务状态
+	 * @return
+	 */
+	TaskStatus getStatus();
 	
 }
