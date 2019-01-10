@@ -4,7 +4,7 @@
 
   <groupId>com.github.jayu</groupId>
   <artifactId>tasker</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
   <packaging>jar</packaging>
 
   <name>tasker</name>
@@ -22,4 +22,24 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
+  <build>
+  	<plugins>
+	  	 <plugin>
+	  	 	<groupId>org.apache.maven.plugins</groupId>
+	  	 	<artifactId>maven-jar-plugin</artifactId>
+	  	 	<version>3.1.0</version>
+	  	 </plugin>
+	  	 <plugin>
+	  	 	<groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.1</version>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+                <encoding>UTF-8</encoding>
+            </configuration>
+	  	 </plugin>
+  	</plugins>
+  </build>
 </project>
