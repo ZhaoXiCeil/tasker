@@ -9,68 +9,34 @@ import com.github.jayu.tasker.model.TaskStatus;
  * @author yujie
  *
  */
-public abstract class AbstractSimpleTask implements ITask {
+public abstract class AbstractSimpleTask extends AbstractTask {
 	
-	//任务状态
-	protected TaskStatus status;
-	
-	//状态锁对象
-	private static final Object statusLock = new Object();
+	//进度
+	private Rate rate;
 
 	/**
-	 * 开始任务
+	 * 构造方法
+	 * @param total 任务的总数量
 	 */
-	@Override
-	public void start() {
-		this.setStatus(TaskStatus.OPEN);
-		this.startExecute();
-	};
-
-	/**
-	 * 结束任务
-	 */
-	@Override
-	public void end() {
-		this.setStatus(TaskStatus.CLOSE);
-		this.endExecute();
-	};
-	
-	/**
-	 * 开始执行任务，子类实现
-	 */
-	public abstract void startExecute();
-	
-	/**
-	 * 结束执行任务，子类实现
-	 */
-	public abstract void endExecute();
+	public AbstractSimpleTask(int total) {
+		super();
+		this.rate = new Rate(total);
+	}
 
 	/**
 	 * 获取进度
 	 */
 	@Override
 	public IRate getRate() {
-		return null;
-	}
-
-	/**
-	 * 获取任务状态
-	 */
-	@Override
-	public TaskStatus getStatus() {
-		synchronized (statusLock) {
-			return status;
-		}
+		return rate;
 	}
 	
 	/**
-	 * 设置任务状态
-	 * @param status
+	 * 设置最新的任务进度
+	 * @param completed
 	 */
-	public void setStatus(TaskStatus status) {
-		synchronized (statusLock) {
-			this.status = status;
-		}
+	public void setCompleted(int completed) {
+		rate.setCompleted(completed);
 	}
 
 }

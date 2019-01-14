@@ -9,7 +9,7 @@ public interface IRate {
 	
 	/**
 	 * 获取进度
-	 * @return
+	 * @return -1表示永无止境
 	 */
 	float getRate();
 
