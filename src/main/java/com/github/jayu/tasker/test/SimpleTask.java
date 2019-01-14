@@ -18,7 +18,7 @@ public class SimpleTask extends AbstractSimpleTask {
 	public SimpleTask(int total) {
 		super(total);
 		for(int i=0; i<total; i++) {
-			sqls.add("第" + i + "条记录。 ");
+			sqls.add("第" + i + "条记录。");
 		}
 	}
 
