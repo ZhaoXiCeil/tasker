@@ -53,5 +53,6 @@
             </configuration>
 	  	 </plugin>
   	</plugins>
+  	<finalName>jayu-tasker-${project.version}</finalName>
   </build>
 </project>

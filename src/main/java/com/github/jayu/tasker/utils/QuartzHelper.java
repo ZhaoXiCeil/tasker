@@ -2,6 +2,7 @@ package com.github.jayu.tasker.utils;
 
 import java.util.Date;
 
+import org.quartz.Job;
 import org.quartz.JobBuilder;
 import org.quartz.JobDetail;
 import org.quartz.Scheduler;
@@ -36,7 +37,7 @@ public class QuartzHelper {
 	 * @return
 	 * @throws SchedulerException
 	 */
-	public static Scheduler addJob(String jobName, Class classType, int seconds) 
+	public static Scheduler addJob(String jobName, Class<? extends Job> classType, int seconds) 
 			throws SchedulerException {
 		return addJob(jobName, classType, seconds, null);
 	}
@@ -50,7 +51,7 @@ public class QuartzHelper {
 	 * @return
 	 * @throws SchedulerException
 	 */
-	public static Scheduler addJob(String jobName, Class classType, int seconds, Object data) 
+	public static Scheduler addJob(String jobName, Class<? extends Job> classType, int seconds, Object data) 
 			throws SchedulerException {
 		return addJob(jobName, JOB_GROUP_NAME, TRIGGER_NAME, TRIGGER_GROUP_NAME, classType, seconds, data);
 	}
@@ -68,7 +69,7 @@ public class QuartzHelper {
 	 * @throws SchedulerException
 	 */
 	public static Scheduler addJob(String jobName, String jobGroup, String triggerName, 
-			String triggerGroup, Class classType, int seconds, Object data) 
+			String triggerGroup, Class<? extends Job> classType, int seconds, Object data) 
 					throws SchedulerException {
 		//触发器（立即执行）
 		Trigger trigger = TriggerBuilder.newTrigger()//创建一个新的TriggerBuilder来规范一个触发器
@@ -97,7 +98,7 @@ public class QuartzHelper {
 	 * @throws SchedulerException
 	 */
 	public static Scheduler addJob(String jobName, String jobGroup, String triggerName, 
-			String triggerGroup, Class classType, Date runTime, int seconds, Object data) 
+			String triggerGroup, Class<? extends Job> classType, Date runTime, int seconds, Object data) 
 			throws SchedulerException {
 		//触发器
         Trigger trigger = TriggerBuilder.newTrigger()//创建一个新的TriggerBuilder来规范一个触发器
@@ -120,7 +121,7 @@ public class QuartzHelper {
 	 * @return
 	 * @throws SchedulerException
 	 */
-	public static Scheduler addJob(String jobName, Class classType, Trigger trigger) 
+	public static Scheduler addJob(String jobName, Class<? extends Job> classType, Trigger trigger) 
 			throws SchedulerException {
 		return addJob(jobName, JOB_GROUP_NAME, TRIGGER_NAME, TRIGGER_GROUP_NAME, classType, trigger, null);
 	}
@@ -138,7 +139,7 @@ public class QuartzHelper {
 	 * @throws SchedulerException
 	 */
 	public static Scheduler addJob(String jobName, String jobGroup, String triggerName, 
-			String triggerGroup, Class classType, Trigger trigger, Object data) 
+			String triggerGroup, Class<? extends Job> classType, Trigger trigger, Object data) 
 					throws SchedulerException {
 		//任务工厂
 		SchedulerFactory schedulerFactory = new StdSchedulerFactory();

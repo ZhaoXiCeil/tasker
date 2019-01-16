@@ -13,7 +13,7 @@ public class JobTest {
 
 		try {
 			
-			scheduler = QuartzHelper.addJob("test", Job1.class, 2, new JobTest());
+			scheduler = QuartzHelper.addJob("test", Job1.class, 1, new JobTest());
 			System.out.println(scheduler);
 		} catch (SchedulerException e) {
 			e.printStackTrace();
