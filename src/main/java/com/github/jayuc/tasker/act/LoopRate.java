@@ -1,6 +1,6 @@
-package com.github.jayu.tasker.act;
+package com.github.jayuc.tasker.act;
 
-import com.github.jayu.tasker.iter.IRate;
+import com.github.jayuc.tasker.iter.IRate;
 
 /**
  * 循环进度，永远不会停止的任务，比如定时器固定时间执行一个任务

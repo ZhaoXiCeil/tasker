@@ -1,4 +1,4 @@
-package com.github.jayu.tasker;
+package com.github.jayuc.tasker;
 
 /**
  * Hello world!

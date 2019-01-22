@@ -1,8 +1,8 @@
-package com.github.jayu.tasker.act;
+package com.github.jayuc.tasker.act;
 
-import com.github.jayu.tasker.iter.IRate;
-import com.github.jayu.tasker.iter.ITask;
-import com.github.jayu.tasker.model.TaskStatus;
+import com.github.jayuc.tasker.iter.IRate;
+import com.github.jayuc.tasker.iter.ITask;
+import com.github.jayuc.tasker.model.TaskStatus;
 
 /**
  * 抽象任务

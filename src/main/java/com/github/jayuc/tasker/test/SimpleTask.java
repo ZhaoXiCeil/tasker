@@ -1,11 +1,11 @@
-package com.github.jayu.tasker.test;
+package com.github.jayuc.tasker.test;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import com.github.jayu.tasker.act.AbstractSimpleTask;
+import com.github.jayuc.tasker.act.AbstractSimpleTask;
 
 public class SimpleTask extends AbstractSimpleTask {
 	

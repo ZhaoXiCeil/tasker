@@ -1,6 +1,6 @@
-package com.github.jayu.tasker.iter;
+package com.github.jayuc.tasker.iter;
 
-import com.github.jayu.tasker.model.TaskStatus;
+import com.github.jayuc.tasker.model.TaskStatus;
 
 /**
  * 任务

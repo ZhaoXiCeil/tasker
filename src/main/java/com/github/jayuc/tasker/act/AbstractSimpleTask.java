@@ -1,6 +1,6 @@
-package com.github.jayu.tasker.act;
+package com.github.jayuc.tasker.act;
 
-import com.github.jayu.tasker.iter.IRate;
+import com.github.jayuc.tasker.iter.IRate;
 
 /**
  * 简单任务抽象实现

@@ -1,9 +1,9 @@
-package com.github.jayu.tasker.test;
+package com.github.jayuc.tasker.test;
 
 import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
 
-import com.github.jayu.tasker.utils.QuartzHelper;
+import com.github.jayuc.tasker.utils.QuartzHelper;
 
 public class JobTest {
 	

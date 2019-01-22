@@ -1,4 +1,4 @@
-package com.github.jayu.tasker.model;
+package com.github.jayuc.tasker.model;
 
 /**
  * 任务状态

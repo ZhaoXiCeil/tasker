@@ -1,4 +1,4 @@
-package com.github.jayu.tasker.iter;
+package com.github.jayuc.tasker.iter;
 
 /**
  * 进度

@@ -1,4 +1,4 @@
-package com.github.jayu.tasker.utils;
+package com.github.jayuc.tasker.utils;
 
 import java.util.Date;
 
