@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.github.jayuc</groupId>
-  <artifactId>tasker</artifactId>
+  <artifactId>jayuc-tasker</artifactId>
   <version>0.0.1</version>
   <packaging>jar</packaging>
 
@@ -53,6 +53,5 @@
             </configuration>
 	  	 </plugin>
   	</plugins>
-  	<finalName>jayuc-tasker-${project.version}</finalName>
   </build>
 </project>
